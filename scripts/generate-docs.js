@@ -20,12 +20,12 @@ try {
 
   // Generate HTML documentation
   console.log('Generating HTML documentation...');
-  execSync('npm run docs', { stdio: 'inherit' });
+  execSync('pnpm run docs', { stdio: 'inherit' });
   console.log('HTML documentation generated in docs/jsdoc/\n');
 
   // Generate Markdown documentation
   console.log('Generating Markdown documentation...');
-  execSync('npm run docs:md', { stdio: 'inherit' });
+  execSync('pnpm run docs:md', { stdio: 'inherit' });
   console.log('Markdown documentation generated in docs/api.md\n');
 
   console.log('Documentation generation complete!');
