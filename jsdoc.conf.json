@@ -1,0 +1,26 @@
+{
+  "source": {
+    "include": ["./dist/"],
+    "includePattern": "\\.js$",
+    "excludePattern": "(node_modules/|docs/)"
+  },
+  "opts": {
+    "destination": "./docs/jsdoc/",
+    "recurse": true,
+    "template": "node_modules/docdash"
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true
+    }
+  },
+  "markdown": {
+    "parser": "gfm",
+    "hardwrap": true
+  }
+}

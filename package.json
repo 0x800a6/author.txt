@@ -1,0 +1,55 @@
+{
+  "name": "@0x800a6/author-txt",
+  "version": "1.0.0",
+  "description": "Author DSL Parser – A robust parser for author configuration files with support for blocks, types, and multiline values.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x800a6/author.txt.git"
+  },
+  "homepage": "https://github.com/0x800a6/author.txt#readme",
+  "bugs": {
+    "url": "https://github.com/0x800a6/author.txt/issues"
+  },
+  "keywords": [
+    "dsl",
+    "parser",
+    "author.txt",
+    "config",
+    "typescript",
+    "library"
+  ],
+  "author": {
+    "name": "Lexi (0x800a6)",
+    "url": "https://0x800a6.dev",
+    "email": "oss@0x800a6.dev"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "format": "prettier --cache --write . --ignore-path .prettierignore",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "docs": "jsdoc -c jsdoc.conf.json",
+    "docs:md": "jsdoc2md dist/**/*.js > docs/api.md",
+    "docs:all": "node scripts/generate-docs.js",
+    "prepublishOnly": "npm run build && npm run format"
+  },
+  "devDependencies": {
+    "docdash": "^2.0.0",
+    "jsdoc": "^4.0.2",
+    "jsdoc-to-markdown": "^8.0.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
+
